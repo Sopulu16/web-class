@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="banner">
+</div> 
+<div class="is hover">
+    <h1 style="text-align: center;">is</h1>
+<a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore labore id, quasi sequi fugiat, </a>
+    
+</div>
+<div class=" has hover">
+    <h1 style="text-align: center;">has</h1>
+    <a href="#"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore labore id, quasi sequi fugiat, </a>
+   
+ 
+</div>
+<div class="where hover">
+    <h1 style="text-align: center;">where</h1>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore labore id, quasi sequi fugiat, </p> 
+  
+ 
+</div>
+   <style>
+    .banner{
+        height: 500px;
+        background: url(images/IMG-20230210-WA0064.jpg);
+        background-repeat: no-repeat;
+        object-fit: contain;
+        background-size: cover;
+        position: relative;
+    }
+
+    .banner::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    :is(.is,.has,.where){
+        min-height: 200px;
+        width: 200px;
+        background-color: gray;
+        position: relative;
+        box-shadow: 0px 2px 5px gray;
+        border-radius: 20px;
+    }
+     .right{
+        margin-left:20%;
+        margin-top: -15.6%;
+    }
+
+    :has(.where, .has, .is){
+        color:red;
+    }
+
+
+   .hover:hover{
+    background-color: black;
+    color: white
+   }
+    /* .box::after{
+        content: 'magic';
+      
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position:absolute;
+        background-color: black;
+    } */
+   </style>
+</body>
+</html>
